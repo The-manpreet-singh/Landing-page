@@ -73,7 +73,7 @@ section {
 	transition: ease 0.3s all;
 }
 
-#navbar_list {
+#navbar_header {
 	display: flex;
 	justify-content: flex-end;
 	list-style: none;
@@ -110,7 +110,7 @@ a:active {
 }
 
 /* Header Styles */
-.page_header {
+.header_page {
 	background: #fff;
 	position: fixed;
 	top: 0;
@@ -119,31 +119,31 @@ a:active {
 }
 
 /* Footer Styles */
-.page_footer {
+.footer_page {
 	background: #000;
 	padding: 2em;
 	color: #fff;
 }
 
-.page_footer p {
+.footer_page p {
 	color: #fff;
 }
 
 /* ---- Theme Rules ---- */
 /* Landing Container Styles */
-.landing_container {
+.section_container {
 	padding: 1em;
 	text-align: center;
 }
 
 @media only screen and (min-width: 35em) {
-	.landing_container {
+	.section_container {
 		max-width: 50em;
 		padding: 4em;
 	}
 }
 
-section:nth-of-type(even) .landing_container {
+section:nth-of-type(even) .section_container {
 	margin-right: 0;
 	margin-left: auto;
 }
@@ -151,7 +151,7 @@ section:nth-of-type(even) .landing_container {
 /* Background Circles */
 /* Note that background circles are created with psuedo elements before and after */
 /* Circles appear to be random do to use of :nth-of-type psuedo class */
-section:nth-of-type(odd) .landing_container::before {
+section:nth-of-type(odd) .section_container::before {
 	content: "";
 	background: rgba(255, 255, 255, 0.187);
 	position: absolute;
@@ -163,7 +163,7 @@ section:nth-of-type(odd) .landing_container::before {
 	transition: ease 0.5s all;
 }
 
-section:nth-of-type(even) .landing_container::before {
+section:nth-of-type(even) .section_container::before {
 	content: "";
 	background: rgb(255, 255, 255);
 	background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
@@ -178,7 +178,7 @@ section:nth-of-type(even) .landing_container::before {
 	transition: ease 0.5s all;
 }
 
-section:nth-of-type(3n) .landing_container::after {
+section:nth-of-type(3n) .section_container::after {
 	content: "";
 	background: rgb(255, 255, 255);
 	background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
@@ -193,7 +193,7 @@ section:nth-of-type(3n) .landing_container::after {
 	transition: ease 0.5s all;
 }
 
-section:nth-of-type(3n + 1) .landing_container::after {
+section:nth-of-type(3n + 1) .section_container::after {
 	content: "";
 	background: rgb(255, 255, 255);
 	background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
@@ -210,8 +210,8 @@ section:nth-of-type(3n + 1) .landing_container::after {
 
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
-/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
-section.your-active-class {
+/* Note: current-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+section.current-active-class {
 	background: rgb(0, 0, 0);
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 }
