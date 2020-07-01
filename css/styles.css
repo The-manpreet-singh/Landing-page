@@ -5,7 +5,9 @@ body {
 	font-family: "Merriweather", serif;
 	color: #fff;
 }
-
+html {
+	scroll-behavior: smooth !important;
+}
 /* Typeography General*/
 h1 {
 	font-family: "Fira Sans", sans-serif;
