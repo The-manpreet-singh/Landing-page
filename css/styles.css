@@ -215,23 +215,3 @@ section.your-active-class {
 	background: rgb(0, 0, 0);
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 }
-
-section.your-active-class .landing_container::before {
-	opacity: 1;
-	animation: rotate 4s linear 0s infinite forwards;
-}
-
-section.your-active-class .landing_container::after {
-	opacity: 1;
-	animation: rotate 5s linear 0s infinite forwards reverse;
-}
-
-/* Section Active Styles Keyframe Animations */
-@keyframes rotate {
-	from {
-		transform: rotate(0deg) translate(-1em) rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg) translate(-1em) rotate(-360deg);
-	}
-}
