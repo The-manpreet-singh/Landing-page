@@ -1,9 +1,9 @@
 
-let sectionList = document.querySelectorAll('section');
-let navListTag = document.getElementById('navbar_header');
-let sectionLength = sectionList.length;
-let sectionPositions = [];
-let oldPosition = 0;
+let sectionNav = document.querySelectorAll('section');
+let NavTag = document.getElementById('navbar_header');
+let sectionNavLength = sectionNav.length;
+let sectionNavPositions = [];
+let prePosition = 0;
 let currentPosition = 0;
 
 function scrollToSection(sectionID) {
@@ -12,26 +12,26 @@ function scrollToSection(sectionID) {
 
 
 // build the nav bar
-sectionList.forEach((element, index) => {
+sectionNav.forEach((element, index) => {
   let sectionName = element.getAttribute('data-nav');
   let toOffSection = element.offsetTop + 30;
   let liTag = document.createElement('li');
   liTag.setAttribute('class', 'menu_link' + index);
   liTag.innerHTML = `<a onClick="scrollToSection(${toOffSection})">${sectionName}</a>`;
-  navListTag.appendChild(liTag);
+  NavTag.appendChild(liTag);
 });
 
 document.addEventListener('scroll', () => {
   currentPosition = this.scrollY;
   // Section Positions
-  sectionPositions = [];
-  sectionList.forEach(element =>
-    sectionPositions.push(element.getBoundingClientRect().top + 50)
+  sectionNavPositions = [];
+  sectionNav.forEach(element =>
+    sectionNavPositions.push(element.getBoundingClientRect().top + 50)
   );
 
   // Adding and removing active sections
-  let addIndex = sectionPositions.findIndex(element => element > 0);
-  for (let i = 0; i < sectionLength; i++) {
+  let addIndex = sectionNavPositions.findIndex(element => element > 0);
+  for (let i = 0; i < sectionNavLength; i++) {
     if (addIndex === i) {
       document.querySelector('.menu_link' + addIndex).classList.add('active');
       document
