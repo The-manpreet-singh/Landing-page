@@ -6,7 +6,7 @@ Project Rubric: [rubric](https://review.udacity.com/#!/rubrics/2658/view)
 
 ## description
 
-I created a persoanl blog web app. I'm going to use html5, css3- grid-layout, flexbox, media-queries, JavaScript .
+I created a Landing Page. I'm going to use html5, css3- grid-layout, flexbox, media-queries, JavaScript .
 
 ## Live-url- https://the-manpreet-singh.github.io/Landing-page/
 
